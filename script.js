@@ -15,15 +15,15 @@ function generatePassword() {
 	}
 
 	var uppercaseElement = document.querySelector("#includeUppercase")
-		var uppercaseChecked = uppercaseElement.checked
-		var uppercaseString = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+	var uppercaseChecked = uppercaseElement.checked
+	var uppercaseString = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 	if (uppercaseChecked === true) {
 		selectedCharacters = selectedCharacters + uppercaseString
 	}
 
 	var lowercaseElement = document.querySelector("#includeLowercase")
-		var lowercaseChecked = lowercaseElement.checked
-		var lowercaseString = 'abcdefghijklmnopqrstuvwxyz'
+	var lowercaseChecked = lowercaseElement.checked
+	var lowercaseString = 'abcdefghijklmnopqrstuvwxyz'
 	if (lowercaseChecked === true) {
 		selectedCharacters = selectedCharacters + lowercaseString
 	}
@@ -37,7 +37,38 @@ function generatePassword() {
 		selectedCharacters = selectedCharacters + symbolsString
 	}
 
-	// console.log(selectedCharacters)
+	var charAmountElement = document.querySelector("#characterAmountNumber")
+	console.log("here is the number element")
+	console.log(charAmountElement)
+
+	var charAmountValue = charAmountElement.value;
+	console.log(charAmountValue)
+
+	// var randomCharacters = [numberString, uppercaseString, lowercaseString, symbolsString]
+
+	for (var i = 0; i > 8, i <= 128; i++) {
+		var randomLocation = (Math.floor(Math.random() * numberString))
+		console.log(numberString.charAt(randomLocation));
+	}
+	
+	
+	for (var i = 0; i > 8, i <= 128; i++) {
+		var randomLocation = (Math.floor(Math.random() * symbolsString))
+		console.log(symbolsString.charAt(randomLocation));
+	}
+
+	for (var i = 0; i > 8, i <= 128; i++) {
+		var randomLocation = (Math.floor(Math.random() * lowercaseString))
+		console.log(lowercaseString.charAt(randomLocation));
+	}
+	
+	for (var i = 0; i > 8, i <= 128; i++) {
+		var randomLocation = (Math.floor(Math.random() * uppercaseString))
+		console.log(uppercaseString.charAt(randomLocation));
+	}
+
+
+	
 	return selectedCharacters
 }
 
@@ -54,30 +85,3 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-// const randomFunc = {
-// 	lower: getRandomLower,
-// 	upper: getRandomUpper,
-// 	number: getRandomNumber,
-// 	symbol: getRandomSymbol,
-// };
-
-// function getRandomSymbol() {
-// 	const symbols = '~!@#$%^&*()_+{}":?><;.,';
-// 	return symbols[Math.floor(Math.random() * symbols.length)];
-// }
-
-// function getRandomLower() {
-// 	const lowercase = 'abcdefghijklmnopqrstuvwxyz';
-// 	return lowercase[Math.floor(Math.random() * lowercase.length)];
-// }
-
-// function getRandomUpper() {
-// 	const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-// 	return uppercase[Math.floor(Math.random() * uppercase.length)];
-// }
-
-// function getRandomNumber() {
-//   const number = '0123456789' ;
-//   return number[Math.floor(Math.random() * number.length)];
-// }
