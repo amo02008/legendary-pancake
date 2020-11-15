@@ -7,7 +7,7 @@ function generatePassword() {
 
 	var numberElement = document.querySelector("#includeNumbers")
 	// console.log(numberElement)
-	var numberChecked = numberElement.checked
+	var numberChecked = numberElement.checkedcharac
 	// console.log(numberChecked)
 	var numberString = '0123456789'
 	if (numberChecked === true) {
